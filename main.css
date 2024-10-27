@@ -9,10 +9,10 @@ body {
     justify-content: center;
     min-height: 100vh;
     flex-direction: column;
-    background: linear-gradient(360deg, aqua, blue,orangered, magenta );
-    background-size: 200% 200%;
-    animation: gradientAnimation 20s ease infinite;
-    overflow: hidden;
+    background-image:url(image\ copy.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: center;
 }
 .card .front-view img{
     width: 40px;
@@ -22,6 +22,7 @@ body {
 }
 .h1{
     padding-bottom: 28px;
+    color: #fff;
 }
 .container{
     height:500px;
@@ -160,14 +161,4 @@ body {
 .hard{
     background-color: red;
 }
-@keyframes gradientAnimation {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
+
