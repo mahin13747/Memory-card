@@ -9,21 +9,24 @@ body {
     justify-content: center;
     min-height: 100vh;
     flex-direction: column;
+    background: linear-gradient(360deg, aqua, blue,orangered, magenta );
+    background-size: 200% 200%;
+    animation: gradientAnimation 20s ease infinite;
+    overflow: hidden;
 }
 .card .front-view img{
     width: 40px;
 }
-
 .card .back-view img{
     max-width: 80px;
 }
 .h1{
-    font-size: 150px;
+    padding-bottom: 28px;
 }
 .container{
     height:500px;
     width: 500px;
-    background: linear-gradient(to right, #fc6767, #ec008c);
+    background-image: linear-gradient(to right, #fc6767, #ec008c);
     border-radius: 10px;
     padding: 25px;
     box-shadow: 0 0 10px;
@@ -43,7 +46,26 @@ body {
 
 /* Add margin between the buttons */
 #start-button {
-    margin-right: 20px; /* Adjust this value to increase/decrease the gap */
+    margin-right: 20px;
+    font-weight: 600;
+    background-color: rgb(27, 245, 27); /* Adjust this value to increase/decrease the gap */
+}
+#restart-button{
+    background-color: orange;
+    font-weight: 600;
+}
+#timer{
+    background-color: lightseagreen;
+    font-weight: 600;
+}
+#attempts{
+    background-color: white;
+    font-weight: 600;
+}
+#score{
+    background-color: gold;
+    font-weight: 600;
+    font-weight: bolder;
 }
 #start-button, #restart-button,  #timer, #attempts, #score{
     margin: 10px; /* Adds space around each button */
@@ -127,5 +149,25 @@ body {
     }
     80%{
         transform: translateX(8px);
+    }
+}
+.easy{
+    background-color: rgb(13, 90, 231);
+}
+.medium{
+    background-color: orange;
+}
+.hard{
+    background-color: red;
+}
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }
